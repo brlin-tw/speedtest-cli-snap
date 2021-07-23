@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Snap launcher for future conveniences
+
+exec "${@}"
