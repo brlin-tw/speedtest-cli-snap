@@ -19,6 +19,7 @@ parts:
     after:
       - selective-checkout
     source: https://github.com/sivel/speedtest-cli.git
+    source-depth: 100
     override-pull: |
       snapcraftctl pull
 
