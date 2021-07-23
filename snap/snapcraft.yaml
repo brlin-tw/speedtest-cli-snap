@@ -55,7 +55,7 @@ parts:
       # - -usr/share/applications/
       # - -usr/share/bug/
 
-  launcher:
+  launchers:
     source: launchers
     plugin: dump
 
