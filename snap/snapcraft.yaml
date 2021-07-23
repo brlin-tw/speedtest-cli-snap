@@ -28,9 +28,32 @@ parts:
 
     plugin: python
     prime:
-      - -usr/share/man/
-      - -usr/share/lintian/
-      - -usr/share/pixmaps/
+      # whitelist matching, could minimize the snap size but requires
+      # great understanding to what the application uses to work
+      - bin/speedtest-cli
+      - lib/python3.6/site-packages/pkg_resources/
+      - lib/python3.6/site-packages/speedtest.py
+      - lib/python3.6/site-packages/speedtest_cli-*.dist-info/
+      - lib/*-linux-gnu/lib*.so*
+      - usr/bin/python3*
+      - usr/lib/python3.6/
+      - usr/lib/*-linux-gnu/lib*.so*
+      - usr/share/doc/*/copyright
+
+      # blacklist matching, easier to trim out files that are trivially
+      # unused, but will be unable to minimize the snap to the extreme
+      # - -lib/python*/site-packages/pip*/
+      # - -lib/python*/site-packages/setuptools*/
+      # - -lib/python*/site-packages/wheel*/
+      # - -usr/lib/python3.7/
+      # - -usr/lib/python3.8/
+      # - -usr/lib/valgrind/
+      # - -usr/sbin/
+      # - -usr/share/man/
+      # - -usr/share/lintian/
+      # - -usr/share/pixmaps/
+      # - -usr/share/applications/
+      # - -usr/share/bug/
 
   launcher:
     source: launchers
