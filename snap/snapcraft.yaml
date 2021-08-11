@@ -8,7 +8,7 @@ description: |
 
   This is NOT an official distribution of speedtest-cli, refer the snap's own issue
   tracker for support:  
-  https://github.com/Lin-Buo-Ren/speedtest-cli-snap/issue
+  https://github.com/Lin-Buo-Ren/speedtest-cli-snap/issues
 
 grade: stable
 confinement: strict
